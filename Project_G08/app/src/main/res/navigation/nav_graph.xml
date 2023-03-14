@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newsHomeFragment">
+    <fragment
+        android:id="@+id/addArticleFragment"
+        android:name="com.example.project_g08.ui.fragments.news.AddArticleFragment"
+        android:label="fragment_add_article"
+        tools:layout="@layout/fragment_add_article" />
+    <fragment
+        android:id="@+id/newsHomeFragment"
+        android:name="com.example.project_g08.ui.fragments.news.NewsHomeFragment"
+        android:label="fragment_news_home"
+        tools:layout="@layout/fragment_news_home" >
+        <action
+            android:id="@+id/action_newsHomeFragment_to_searchBar"
+            app:destination="@id/searchBar" />
+        <action
+            android:id="@+id/action_newsHomeFragment_to_signInFragment22"
+            app:destination="@id/signInFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/worldFragment"
+        android:name="com.example.project_g08.ui.fragments.news.WorldFragment"
+        android:label="fragment_world"
+        tools:layout="@layout/fragment_world" />
+    <fragment
+        android:id="@+id/sportsFragment"
+        android:name="com.example.project_g08.ui.fragments.news.SportsFragment"
+        android:label="fragment_sports"
+        tools:layout="@layout/fragment_sports" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.example.project_g08.ui.fragments.news.NewsFragment"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/accountFragment"
+        android:name="com.example.project_g08.ui.fragments.account.AccountFragment"
+        android:label="fragment_account"
+        tools:layout="@layout/fragment_account" />
+    <fragment
+        android:id="@+id/allUsersNewsFragment"
+        android:name="com.example.project_g08.ui.fragments.news.AllUsersNewsFragment"
+        android:label="fragment_all_users_news"
+        tools:layout="@layout/fragment_all_users_news" />
+    <fragment
+        android:id="@+id/searchBar"
+        android:name="com.example.project_g08.ui.fragments.news.SearchBar"
+        android:label="fragment_search_bar"
+        tools:layout="@layout/fragment_search_bar" >
+        <argument
+            android:name="category"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_searchBar_to_newsHomeFragment"
+            app:destination="@id/newsHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment2"
+        android:name="com.example.project_g08.ui.fragments.account.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" />
+    <fragment
+        android:id="@+id/favourite"
+        android:name="com.example.project_g08.ui.fragments.news.Favourite"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" />
+</navigation>

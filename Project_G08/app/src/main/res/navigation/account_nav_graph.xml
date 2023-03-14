@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/account_nav_graph"
+    app:startDestination="@id/accountHomeFragment">
+    <fragment
+        android:id="@+id/accountHomeFragment"
+        android:name="com.example.project_g08.ui.fragments.account.AccountHomeFragment"
+        android:label="fragment_account_home"
+        tools:layout="@layout/fragment_account_home" >
+        <action
+            android:id="@+id/action_accountHomeFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_accountHomeFragment_to_usersNewsFragment"
+            app:destination="@id/usersNewsFragment" />
+        <action
+            android:id="@+id/action_accountHomeFragment_to_accountUpdateFragment"
+            app:destination="@id/accountUpdateFragment" />
+        <action
+            android:id="@+id/action_accountHomeFragment_to_updateUsernameFragment"
+            app:destination="@id/updateUsernameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.example.project_g08.ui.fragments.account.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.project_g08.ui.fragments.account.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/usersNewsFragment"
+        android:name="com.example.project_g08.ui.fragments.news.UsersNewsFragment"
+        android:label="fragment_users_news"
+        tools:layout="@layout/fragment_users_news" >
+        <action
+            android:id="@+id/action_usersNewsFragment_to_accountHomeFragment"
+            app:destination="@id/accountHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountUpdateFragment"
+        android:name="com.example.project_g08.ui.fragments.account.AccountUpdateFragment"
+        android:label="fragment_account_update"
+        tools:layout="@layout/fragment_account_update" >
+        <action
+            android:id="@+id/action_accountUpdateFragment_to_accountHomeFragment"
+            app:destination="@id/accountHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateUsernameFragment"
+        android:name="com.example.project_g08.ui.fragments.account.UpdateUsernameFragment"
+        android:label="fragment_update_username"
+        tools:layout="@layout/fragment_update_username" >
+        <action
+            android:id="@+id/action_updateUsernameFragment_to_accountHomeFragment"
+            app:destination="@id/accountHomeFragment" />
+    </fragment>
+</navigation>
